@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="https://kit.fontawesome.com/f8c8d43adc.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="download-twitter.ico">
+    <title>Log in</title>
+</head>
+<body>
+  <center>
+    <div class="log_in_div">
+      <br>
+      <br>
+      <div class="holder">  
+        <div class="twitter_icon"><i class="fa fa-twitter fa-4x"></i></div>
+        <h2>Log In to Twitter</h2>
+      <input type="text" placeholder="@username" id="username"><br><br>
+      <a href="main-tweet.html">
+        <button type="button" id="button" disabled>
+        Log In
+        </button>
+      </a><br>
+      <p>Forgot Username?</p>
+      </div>
+    </div>
+  </center>
+
+  <script>
+
+
+const username = document.getElementById("username");
+const loginButton = document.getElementById("button");
+
+username.addEventListener("input", function() {
+  if (username.value.trim() === "") {
+    loginButton.disabled = true;
+  }else {
+    loginButton.disabled = false;
+ 
+  }
+});
+
+loginButton.addEventListener("click", function() {
+  username.value = "";
+})
+
+</script>
+</body>
+</html>

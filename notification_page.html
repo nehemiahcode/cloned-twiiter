@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8c8d43adc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="download-twitter.ico">
+    <title>Notification_page
+    </title>
+   
+</head>
+<body>
+    <header class="notification_header">
+  <img src="istockphoto-1383510053-612x612.jpg" alt="picture_png">
+  <h2>Notifications</h2>
+  <span class="fa fa-gear"></span>
+    </header>
+    
+    <div class="topnav">
+        <nav>
+         <ul>
+            <li><a href="#for" class="all">All</a></li>
+            <li><a href="#verified" class="verified">Verified</a></li>
+            <li><a href="#mention" class="mention">Mentions</a></li>
+        </ul>
+        <div class="active-border active-border2"></div>
+        </nav>
+         </div>
+
+       
+          
+        
+      
+<div class="navbottom">
+    <a href="main-tweet.html">
+        <span class="fa fa-home" id="icons1"></span>
+     </a>
+    
+    <a href="search.html">
+       <span class="fa fa-search" id="icons2"></span>
+    </a>
+   
+   <a href="space_page.html">
+       <span class="fas fa-microphone-alt fa-2x" id="icons3"></span>
+   </a>
+   <a href="notification_page.html">
+       <span class="fa fa-bell" id="icons4"></span>
+      </a>
+   
+   
+      <a href="message_inbox.html">
+       <span class="fa fa-envelope" id="icons5"></span>
+      </a>
+   
+    </div>
+    <div class="block1 block_img">
+        <img src="pexels-photo-9129526.jpeg" alt="twiiter_pic">
+        <!-- <div class="preloader">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+            </div>
+        </div> -->
+    </div>
+    <div class="block2">
+        <div class="preloader">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+    </div>
+    <div class="block3">
+        <div class="div">
+
+    
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sunsets don&#39;t get much better than this one over <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>. <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw">#nature</a> <a href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw">#sunset</a> <a href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a></p>&mdash; US Department of the Interior (@Interior) <a href="https://twitter.com/Interior/status/463440424141459456?ref_src=twsrc%5Etfw">May 5, 2014</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+        </div>
+      </div>
+         <script>
+            
+        const navLinks = document.querySelectorAll("nav ul li a");
+        const border = document.querySelector(".active-border");
+
+        function moveBorder() {
+            const activeLink = document.querySelector("nav ul li a.slide");
+            border.style.width = activeLink.offSetWidth + "px";
+            border.style.transform = `translateX(${activeLink.offsetLeft}px)`
+        }
+        navLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                navLinks.forEach(link => link.classList.remove("slide"));
+                e.target.classList.add("slide");
+                moveBorder();
+            });
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+            moveBorder();
+        });
+        window.addEventListener("resize", () => {
+            moveBorder();
+        });
+
+        const forYouPost = document.querySelector(".all");
+        const follow = document.querySelector(".verified");
+        const mention = document.querySelector(".mention");
+        const block1 = document.querySelector(".block1");
+        const block2 = document.querySelector(".block2");
+        const block3 = document.querySelector(".block3");
+        follow.onclick = function() {
+            block2.classList.add("not-open");
+            block1.classList.add("is-open");
+            block3.classList.remove("not-open");
+        }
+        forYouPost.onclick = function() {
+            block2.classList.remove("not-open");
+            block1.classList.remove("is-open");
+            block3.classList.remove("not-open");
+        }
+       mention.onclick = function() {
+        block3.classList.add("not-open");
+        block1.classList.add("is-open");
+        block2.classList.remove("not-open");
+       }
+         </script>
+</body>
+</html>

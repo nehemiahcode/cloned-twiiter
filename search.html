@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8c8d43adc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="download-twitter.ico">
+    <title>sarch_page</title>
+  
+</head>
+<body>
+    <header class="search_header">
+<img src="istockphoto-1383510053-612x612.jpg" alt="picture_png">
+<input type="text" placeholder="Search Tweet..">
+<span class="fa fa-gear"></span>
+    </header>
+    <div class="search_page">
+        <h1>Oops, something<br> went wrong</h1>
+        <p>But dont worry - it's not your fault</p>
+        <button>Retry</button>
+    
+    </div>
+   
+    <div class="div_button">
+        <span class="tweet1 twee1">Tweet</span> 
+        <button class="tweetbutton" type="button">+</button>
+        <span class="tweet2  twee2">Gif</span> 
+    <button class="tweetbutton2 bot" type="button"><i class="far fa-grimace fa-2x"></i></button>
+        
+    <span class="tweet3  twee3">Photos</span> 
+    <button class="tweetbutton3 bot2" type="button"><i class="far fa-image fa-2x"></i></button>
+        
+    <span class="tweet4  twee4">Spaces</span> 
+    <button class="tweetbutton4 bot3" type="button"><i class="fas fa-microphone-alt fa-2x"></i></button>
+</div>
+
+<div class="navbottom">
+    <a href="main-tweet.html">
+        <span class="fa fa-home" id="icons1"></span>
+     </a>
+    
+    <a href="search.html">
+       <span class="fa fa-search" id="icons2"></span>
+    </a>
+   
+   <a href="space_page.html">
+       <span class="fas fa-microphone-alt fa-2x" id="icons3"></span>
+   </a>
+   <a href="notification_page.html">
+       <span class="fa fa-bell" id="icons4"></span>
+      </a>
+   
+   
+      <a href="message_inbox.html">
+       <span class="fa fa-envelope" id="icons5"></span>
+      </a>
+   
+    </div>
+
+<script>
+
+            const tweetbutton = document.querySelector(".tweetbutton");
+            const div_button = document.querySelector(".div_button");
+            const tweetbutton2 = document.querySelector(".tweetbutton2");
+            const tweetbutton3 = document.querySelector(".tweetbutton3");
+            const tweetbutton4 = document.querySelector(".tweetbutton4");
+            const bot = document.querySelector(".bot");
+            const bot2 = document.querySelector(".bot2");
+            const bot3 = document.querySelector(".bot3");
+            const twee1 = document.querySelector(".twee1");
+            const twee2 = document.querySelector(".twee2");
+            const twee3 = document.querySelector(".twee3");
+            const twee4 = document.querySelector(".twee4");
+
+            tweetbutton.onclick = function() {
+                tweetbutton.classList.toggle("rotate");
+                bot.classList.toggle("rotate2");
+                bot2.classList.toggle("rotate2");
+                bot3.classList.toggle("rotate2");
+                twee1.classList.toggle("tweet")
+                twee2.classList.toggle("tweet")
+                twee3.classList.toggle("tweet")
+                twee4.classList.toggle("tweet")
+            }
+
+</script>
+</body>
+</html>
